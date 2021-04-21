@@ -1,6 +1,6 @@
 const totelStack = 100;
 
-bet = () => {
+betResult = () => {
 randomBet = Math.floor(Math.random () * 10) % 2;
   switch(randomBet){
         case 1:
@@ -10,15 +10,19 @@ randomBet = Math.floor(Math.random () * 10) % 2;
   }
 };
  
-let dayStack=0;
-while (dayStack < 50 && dayStack > -50){
-    dayStack = dayStack + bet()
+let result = [];
+dayCount = 0
+
+for(let i=0; i<20; i++){
+    dayCount++
+    var dayStack=0;
+    while (dayStack < 50 && dayStack > -50){
+        dayStack = dayStack + betResult()
+    }
+    result.push(dayStack);
 }
 
-if(dayStack == 50){
-    console.log("You won 50% of the stake");
-}else if(dayStack == -50){
-    console.log("You lose 50% of the stack");
-}
+console.log(result);
+
 
 
