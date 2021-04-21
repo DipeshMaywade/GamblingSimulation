@@ -24,5 +24,11 @@ for(let i=0; i<20; i++){
 
 console.log(result);
 
+finalStack = result.reduce((a,b)=> a+b, 0)
+
+console.log(`After ${dayCount} Days of Palying Final Amount is ${finalStack}`);
+
+
+
 
 
