@@ -71,3 +71,4 @@ console.log(lostCountMap);
 finalStack = monthResult.reduce((a, b) => a + b, 0);
 
 console.log(`After ${dayCount} Days of Palying Final Amount is ${finalStack}`);
+
