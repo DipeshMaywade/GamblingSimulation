@@ -1,17 +1,17 @@
 
 let finalStack = 0
 
-again = () => {
-    betResult = () => {
-        randomBet = Math.floor(Math.random() * 10) % 2;
-        switch (randomBet) {
-            case 1:
-                return 1;
-            case 0:
-                return -1;
-        }
-    };
+const betResult = () => {
+    randomBet = Math.floor(Math.random() * 10) % 2;
+    switch (randomBet) {
+        case 1:
+            return 1;
+        case 0:
+            return -1;
+    }
+};
 
+main = () => {
     let monthResult = [];
     let lostCountMap = new Map();
     let wonCountMap = new Map();
@@ -83,7 +83,8 @@ again = () => {
     console.log(`After ${dayCount} Days of Palying Final Amount is ${finalStack}`);
 
 }
-again()
+
+main()
 while(finalStack >= 0) {
-    again()
+    main()
 }
